@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>会话中心-Androidpn后台管理中心</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="css/console.css" />
+		<link rel="stylesheet" href="css/tablesorter/style.css" />
+	</head>
+
+	<body>
+		<div id="page">
+			<div id="header">
+
+				<div id="branding">
+					<h1><a href="index.html">Android消息推送管理后台</a></h1>
+				</div>
+
+			</div>
+			<div id="content">
+				<ul id="tabmenu">
+					<li>
+						<a href="index.html" class="">主页</a>
+					</li>
+					<li>
+						<a href="user.html" class="">用户中心</a>
+					</li>
+					<li>
+						<a href="session.html" class="current">会话中心</a>
+					</li>
+					<li>
+						<a href="notification.html" class="">通知中心</a>
+					</li>
+				</ul>
+				<div id="tabcontent">
+
+					<h1>会话</h1>
+
+					<table id="tableList" class="tablesorter" cellspacing="1">
+						<thead>
+							<tr>
+								<th>Username</th>
+								<th>Resource</th>
+								<th>Status</th>
+								<th>Presence</th>
+								<th>Client IP</th>
+								<th>Created</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>adb9a5271832464e9822f835655cf148</td>
+								<td>AndroidpnClient</td>
+								<td>AUTHENTICATED</td>
+								<td><img src="image/user-online.png" /> Online</td>
+								<td>192.168.0.102</td>
+								<td>2019-01-12 16:17:23</td>
+							</tr>
+
+							<tr>
+								<td>b93a35c5afbd4d448f8fc912b047e7d9</td>
+								<td>AndroidpnClient</td>
+								<td>AUTHENTICATED</td>
+								<td><img src="image/user-online.png" /> Online</td>
+								<td>192.168.0.100</td>
+								<td>2019-01-12 16:20:04</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div id="footer">
+				<div id="copyright">&copy; 2019 Androidpn (androidpn-server v0.0.1)</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+
+		<script type="text/javascript">
+			//<![CDATA[
+			$(function() {
+				$('#tableList').tablesorter();
+				//$('#tableList').tablesorter( {sortList: [[0,0], [1,0]]} );
+				//$('table tr:nth-child(odd)').addClass('odd');
+				$('table tr:nth-child(even)').addClass('even');
+			});
+			//]]>
+		</script>
+	</body>
+
+</html>
