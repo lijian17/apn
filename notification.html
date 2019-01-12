@@ -91,50 +91,11 @@
 			</div>
 		</div>
 
-		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
-		<script type="text/javascript">
-			//<![CDATA[
-			$(function() {
-				$('input[name=broadcast]').click(function() {
-					if($('input[name=broadcast]')[0].checked) {
-						$('#trUsername').hide();
-						$('#trAlias').hide();
-						$('#trTag').hide();
-					} else if($('input[name=broadcast]')[1].checked) {
-						$('#trUsername').show();
-						$('#trAlias').hide();
-						$('#trTag').hide();
-					} else if($('input[name=broadcast]')[2].checked) {
-						$('#trUsername').hide();
-						$('#trAlias').show();
-						$('#trTag').hide();
-					} else if($('input[name=broadcast]')[3].checked) {
-						$('#trUsername').hide();
-						$('#trAlias').hide();
-						$('#trTag').show();
-					}
-				});
-
-				if($('input[name=broadcast]')[0].checked) {
-					$('#trUsername').hide();
-					$('#trAlias').hide();
-					$('#trTag').hide();
-				} else if($('input[name=broadcast]')[1].checked) {
-					$('#trUsername').show();
-					$('#trAlias').hide();
-					$('#trTag').hide();
-				} else if($('input[name=broadcast]')[2].checked) {
-					$('#trUsername').hide();
-					$('#trAlias').show();
-					$('#trTag').hide();
-				} else if($('input[name=broadcast]')[3].checked) {
-					$('#trUsername').hide();
-					$('#trAlias').hide();
-					$('#trTag').show();
-				}
-			});
-			//]]>
-		</script>
+		<script type="text/javascript" src="js/util/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="js/util/jquery.tablesorter.js"></script>
+		<script type="text/javascript" src="js/config.js" ></script>
+		<script type="text/javascript" src="js/util.js" ></script>
+		<script type="text/javascript" src="js/notification.js"></script>
 	</body>
 
 </html>
