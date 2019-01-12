@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>用户中心-Androidpn后台管理中心</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="css/console.css" />
+		<link rel="stylesheet" href="css/tablesorter/style.css" />
+	</head>
+
+	<body>
+
+		<div id="page">
+			<div id="header">
+
+				<div id="branding">
+					<h1><a href="index.html">Android消息推送管理后台</a></h1>
+				</div>
+
+			</div>
+			<div id="content">
+				<ul id="tabmenu">
+					<li>
+						<a href="index.html" class="">主页</a>
+					</li>
+					<li>
+						<a href="user.html" class="current">用户中心</a>
+					</li>
+					<li>
+						<a href="session.html" class="">会话中心</a>
+					</li>
+					<li>
+						<a href="notification.html" class="">通知中心</a>
+					</li>
+				</ul>
+				<div id="tabcontent">
+
+					<h1>用户中心</h1>
+
+					<table id="tableList" class="tablesorter" cellspacing="1">
+						<thead>
+							<tr>
+
+								<th>Online</th>
+								<th>Username</th>
+								<th>Name</th>
+								<th>Email</th>
+								<th>Created</th>
+							</tr>
+						</thead>
+						<tbody>
+
+							<tr>
+								<td align="center">
+
+									<img src="image/user-offline.png" />
+
+								</td>
+								<td>190109HSH1MA0G0H</td>
+								<td></td>
+								<td></td>
+								<td align="center">2019-01-09 23:32:53</td>
+							</tr>
+
+							<tr>
+								<td align="center">
+
+									<img src="image/user-offline.png" />
+
+								</td>
+								<td>b93a35c5afbd4d448f8fc912b047e7d9</td>
+								<td></td>
+								<td></td>
+								<td align="center">2019-01-06 17:18:08</td>
+							</tr>
+
+							<tr>
+								<td align="center">
+
+									<img src="image/user-online.png" />
+
+								</td>
+								<td>adb9a5271832464e9822f835655cf148</td>
+								<td></td>
+								<td></td>
+								<td align="center">2019-01-06 16:39:13</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div id="footer">
+				<div id="copyright">&copy; 2019 Androidpn (androidpn-server v0.0.1)</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+
+		<script type="text/javascript">
+			//<![CDATA[
+			$(function() {
+				$('#tableList').tablesorter();
+				//$('#tableList').tablesorter( {sortList: [[0,0], [1,0]]} );
+				//$('table tr:nth-child(odd)').addClass('odd');
+				$('table tr:nth-child(even)').addClass('even');
+			});
+			//]]>
+		</script>
+	</body>
+
+</html>
