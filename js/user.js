@@ -2,34 +2,38 @@
 	function queryUserList() {
 		sendToRemote("user/queryUserList", null, queryUserList_success);
 	}
-	
+
 	function queryUserList_success(data) {
 		console.log(data);
 		if(data && data.status == 200) {
 			var tbody;
-			for (var i = 0; i < data.data.length; i++) {
+			for(var i = 0; i < data.data.length; i++) {
 				tbody += '<tr>';
-				
+
 				tbody += '<td align="center">';
-				tbody += '<img src="image/user-offline.png" />';
+				if(data.data[i].online) {
+					tbody += '<img src="image/user-online.png" />';
+				} else {
+					tbody += '<img src="image/user-offline.png" />';
+				}
 				tbody += '</td>';
-				
+
 				tbody += '<td>';
 				tbody += data.data[i].username;
 				tbody += '</td>';
-				
+
 				tbody += '<td>';
 				tbody += data.data[i].name || "";
 				tbody += '</td>';
-				
+
 				tbody += '<td>';
 				tbody += data.data[i].email || "";
 				tbody += '</td>';
-				
+
 				tbody += '<td>';
 				tbody += data.data[i].createdDate;
 				tbody += '</td>';
-				
+
 				tbody += '</tr>';
 			}
 			$('#tableList tbody').html(tbody);
